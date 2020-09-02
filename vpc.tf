@@ -9,7 +9,8 @@ locals {
 }
 
 module "test-vpc-module" {
-  source       = "../../"
+  source  = "app.terraform.io/siska-training/network/google"
+  version = "2.5.0"
   project_id   = var.project
   network_name = "sis"
 
