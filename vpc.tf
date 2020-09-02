@@ -3,15 +3,15 @@ provider "null" {
 }
 
 locals {
-  subnet_01 = "${var.network_name}-subnet-01"
-  subnet_02 = "${var.network_name}-subnet-02"
-  subnet_03 = "${var.network_name}-subnet-03"
+  subnet_01 = "sis-subnet-01"
+  subnet_02 = "sis-subnet-02"
+  subnet_03 = "sis-subnet-03"
 }
 
 module "test-vpc-module" {
   source       = "../../"
-  project_id   = var.project_id
-  network_name = var.network_name
+  project_id   = var.project
+  network_name = "sis"
 
   subnets = [
     {
